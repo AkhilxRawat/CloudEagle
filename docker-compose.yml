@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  github-access-report:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
+    restart: unless-stopped
